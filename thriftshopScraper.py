@@ -24,6 +24,6 @@ argv = inputHandler.get_seed_input()
 db = open_file()
 dispatch_scrapers(argv[0], argv[1], db)
 while True:
-    if not dataInterpreter.task_handler(db.name, int(argv[1])):
+    if not dataInterpreter.task_handler(db.name):
         break
 db.close()

@@ -6,7 +6,7 @@ def print_output(sorted_df, nitems_requested):
     for i in range(0, nitems_requested):
         print("#" + str(i + 1) + ":\n" +
               "PRICE: " + str(int(sorted_df['PRICE'].values[i])) + "원\n" +
-              "ITEM NAME: " + sorted_df['NAME'].values[i] + "\n" +
+              "ITEM NAME: " + sorted_df['ITEM'].values[i] + "\n" +
               "WEBSITE: " + sorted_df['SHOP'].values[i] + "\n")
 
 
@@ -25,8 +25,9 @@ def calculate_highest(df, nitems_requested):
     print_output(highest, nitems_requested)
 
 
-def task_handler(filename, nitems_scraped):
+def task_handler(filename):
     df = pd.read_csv(filename, delimiter="\t")
+    nitems_scraped = len(df)
     task = inputHandler.get_task_input()
     if task == 0:
         return False

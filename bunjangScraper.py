@@ -1,6 +1,7 @@
 from selenium import webdriver
 from bs4 import BeautifulSoup
 from selenium.common.exceptions import TimeoutException
+from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
@@ -21,33 +22,40 @@ def enter_search_word(keyword):
 
 
 def format_entry(name, price):
-    name = name.strip("\n ")
-    if price != "N/A":
-        price = int(re.sub("[\n 원,]", "", price))
+    name = re.sub("[\t\n ]", "", name)
+    price = int(re.sub("[\t\n 원,]", "", price))
     return "번개장터\t{}\t{}\n".format(name, price)
 
 
 def collect_info(entry):
     try:  #TODO: the names of the class keeps changing
-        name = entry.find(class_="sc-drlKqa ksilmM").get_text()
+        name = entry.find(class_="sc-clNaTc eVmuLh").get_text()
     except AttributeError:
-        name = "N/A"
+        name = "0"
     try:
-        price = entry.find(class_="sc-bIqbHp jdYBdp").get_text()
+        price = entry.find(class_="sc-etwtAo hoDAwD").get_text()
     except AttributeError:
-        price = "N/A"
-    product_info = format_entry(name, price)
-    return product_info
+        price = "0"
+    return format_entry(name, price)
+
+
+def no_entries(driver):
+    try:
+        driver.find_element(By.XPATH, "//*[contains(text(), '검색결과가 없습니다')]")
+    except NoSuchElementException:
+        return False
+    return True
 
 
 def parse_page(driver, url, db):
     driver.get(url)
     cur_page = driver.page_source
     bs = BeautifulSoup(cur_page, 'html.parser')
-    catalogue = bs.find_all(class_="sc-OxbzP kDNmKk")
-    for product in catalogue:
-        product_info = collect_info(product)
-        db.write(product_info)
+    catalogue = bs.find_all(class_="sc-elNKlv cpNpD")
+    for item in catalogue:
+        item_info = collect_info(item)
+        print(item_info)
+        db.write(item_info)
 
 
 def load_entries(driver, page_number):
@@ -66,17 +74,25 @@ def load_entries(driver, page_number):
         time.sleep(.5)
         button.click()
         time.sleep(.5)
-    except TimeoutException as e:
-        print(e + ": 10 seconds passed but could not find item.")
-        return
+    except TimeoutException:
+        return False
+    return True
 
 
 def scrape_bunjang(keyword, nitems, db):
     driver = enter_search_word(keyword)
-    url = driver.current_url
     npages = math.ceil(int(nitems) / 100)
+    url = driver.current_url
+
+    # if no entries exit at all:
+    if no_entries(driver):
+        print("No entries with keyword " + keyword + " in Bunjang.")
+        driver.close()
+        return
+
     for i in range(1, npages + 1):
         parse_page(driver, url, db)
-        load_entries(driver, i + 1)
+        if not load_entries(driver, i + 1):
+            break
         url = driver.current_url
     driver.close()

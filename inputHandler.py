@@ -1,7 +1,6 @@
 def get_seed_input():
     keyword = input("SEARCH FOR:\n")
     nitems_to_scrape = input("NUMBER OF ITEMS TO COMPARE:\n")
-    #TODO: how to handle small numbers, ie compare 50 items?
     #TODO: how to select filters on each website?
     return [keyword, nitems_to_scrape]
 
