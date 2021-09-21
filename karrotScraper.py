@@ -11,6 +11,7 @@ import math
 import re
 import stringHandler
 
+
 def enter_search_word(keyword):
     driver = webdriver.Chrome(stringHandler.chromeDriverPath)
     driver.maximize_window()
@@ -22,7 +23,7 @@ def enter_search_word(keyword):
 
 
 def format_entry(name, price):
-    name = re.sub("[\t\n ]", "", name)
+    name = re.sub("[\t\n]", "", name)
     price = int(re.sub("[\t\n 원,]", "", price))
     return "당근마켓\t{}\t{}\n".format(name, price)
 
@@ -30,11 +31,14 @@ def format_entry(name, price):
 def collect_info(catalogue, db):
     for entry in catalogue:
         try:
-            name = entry.find(class_="article-title").get_text()
+            name = entry.find(class_ = stringHandler.karrotName).get_text()
         except AttributeError:
             name = "0"
-        price = entry.find(class_="article-price").get_text()
-        if '-' in price:
+        try:
+            price = entry.find(class_ = stringHandler.karrotPrice).get_text()
+        except AttributeError:
+            name = "0"
+        if '-' in price or '나눔' in price:
             price = "0"
         item_info = format_entry(name, price)
         print(item_info)
@@ -43,7 +47,7 @@ def collect_info(catalogue, db):
 
 def no_entries(driver):
     try:
-        driver.find_element(By.CLASS_NAME, "empty-result-message")
+        driver.find_element(By.CLASS_NAME, stringHandler.karrotNoElement)
     except NoSuchElementException:
         return False
     return True
@@ -52,7 +56,7 @@ def no_entries(driver):
 def load_entries(driver):
     try:
         button = WebDriverWait(driver, 5).until(
-            EC.element_to_be_clickable((By.XPATH, "//div[contains(@onclick, 'moreResult')]")))
+            EC.element_to_be_clickable((By.XPATH, stringHandler.karrotLoadMore)))
         time.sleep(.5)
         button.click()
         time.sleep(.5)
@@ -76,5 +80,5 @@ def scrape_karrot(keyword, nitems, db):
             break
     page = driver.page_source
     bs = BeautifulSoup(page, 'html.parser')
-    collect_info(bs.find_all(class_="flea-market-article flat-card"), db)
+    collect_info(bs.find_all(class_ = stringHandler.karrotCatalogue), db)
     driver.close()

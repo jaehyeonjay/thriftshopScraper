@@ -23,18 +23,18 @@ def enter_search_word(keyword):
 
 
 def format_entry(name, price):
-    name = re.sub("[\t\n ]", "", name)
+    name = re.sub("[\t\n]", "", name)
     price = int(re.sub("[\t\n 원,]", "", price))
     return "번개장터\t{}\t{}\n".format(name, price)
 
 
 def collect_info(entry):
     try:  #TODO: the names of the class keeps changing
-        name = entry.find(class_="sc-clNaTc eVmuLh").get_text()
+        name = entry.find(class_= stringHandler.bunjangName).get_text()
     except AttributeError:
         name = "0"
     try:
-        price = entry.find(class_="sc-etwtAo hoDAwD").get_text()
+        price = entry.find(class_=stringHandler.bunjangPrice).get_text()
     except AttributeError:
         price = "0"
     return format_entry(name, price)
@@ -42,7 +42,7 @@ def collect_info(entry):
 
 def no_entries(driver):
     try:
-        driver.find_element(By.XPATH, "//*[contains(text(), '검색결과가 없습니다')]")
+        driver.find_element(By.XPATH, stringHandler.bunjangNoElement)
     except NoSuchElementException:
         return False
     return True
@@ -52,7 +52,7 @@ def parse_page(driver, url, db):
     driver.get(url)
     cur_page = driver.page_source
     bs = BeautifulSoup(cur_page, 'html.parser')
-    catalogue = bs.find_all(class_="sc-elNKlv cpNpD")
+    catalogue = bs.find_all(class_=stringHandler.bunjangCatalogue)
     for item in catalogue:
         item_info = collect_info(item)
         print(item_info)
@@ -63,13 +63,7 @@ def load_entries(driver, page_number):
     try:
         if page_number % 10 == 1:
             button = WebDriverWait(driver, 10).until(EC.element_to_be_clickable((By.XPATH,
-                                                    "//a[@class='sc-ccbnFN jbSbET']//img[@src='data:image/svg+xml;"
-                                                    "base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdp"
-                                                    "ZHRoPSIxMiIgaGVpZ2h0PSIxMiIgdmlld0JveD0iMCAwIDEyIDEyIj4KICAgIDx"
-                                                    "wYXRoIGZpbGw9IiM5Qjk5QTkiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTMuNiA"
-                                                    "xMmEuNTk2LjU5NiAwIDAgMCAuNDQ5LS4yMDJsNC44LTUuNGEuNi42IDAgMCAwIDA"
-                                                    "tLjc5N2wtNC44LTUuNGEuNi42IDAgMSAwLS44OTcuNzk3TDcuNTk4IDYgMy4xNTI"
-                                                    "gMTFBLjYuNiAwIDAgMCAzLjYgMTIiLz4KPC9zdmc+Cg==']")))
+                                                                                 stringHandler.bunjangLoadMore)))
         else:
             button = WebDriverWait(driver, 20).until(EC.element_to_be_clickable((By.LINK_TEXT, str(page_number))))
         time.sleep(.5)

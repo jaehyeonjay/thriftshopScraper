@@ -6,6 +6,8 @@
       <change beforePath="$PROJECT_DIR$/bunjangScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/bunjangScraper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/joongnaScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/joongnaScraper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/karrotScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/karrotScraper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stringHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/stringHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thriftshopScraperData.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +36,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Python.interpretor_tester">
+  <component name="RunManager" selected="Python.thriftshopScraper">
     <configuration name="interpretor_tester" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="thriftshopScraper" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,8 +81,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.interpretor_tester" />
         <item itemvalue="Python.thriftshopScraper" />
+        <item itemvalue="Python.interpretor_tester" />
       </list>
     </recent_temporary>
   </component>
@@ -98,26 +100,26 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1631274234923">
+    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1632207012288">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1631274234923" />
-    <state width="1419" height="303" key="GridCell.Tab.0.bottom" timestamp="1631286519643">
+    <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1632207012288" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1632207019348">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1631286519643" />
-    <state width="1419" height="303" key="GridCell.Tab.0.center" timestamp="1631286519641">
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1632207019348" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1632207019346">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1631286519641" />
-    <state width="1419" height="303" key="GridCell.Tab.0.left" timestamp="1631286519640">
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1632207019346" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1632207019345">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1631286519640" />
-    <state width="1419" height="303" key="GridCell.Tab.0.right" timestamp="1631286519642">
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1632207019345" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1632207019347">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1631286519642" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1632207019347" />
     <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1631286519646">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
