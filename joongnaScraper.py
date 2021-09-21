@@ -9,13 +9,14 @@ from selenium.webdriver.common.keys import Keys
 import time
 import math
 import re
+import stringHandler
 
 
 def enter_search_word(keyword):
-    driver = webdriver.Chrome('/Users/jaypark/Downloads/chromedriver')
+    driver = webdriver.Chrome(stringHandler.chromeDriverPath)
     driver.maximize_window()
-    driver.get('https://m.joongna.com/home')
-    input_elem = driver.find_element(By.XPATH, "//input[@type='text']")  #TODO: why doesn't this work occasionally?
+    driver.get(stringHandler.joongnaMainURL)
+    input_elem = driver.find_element(By.XPATH, stringHandler.searchEngineXPath)  #TODO: why doesn't this work occasionally?
     input_elem.send_keys(keyword)
     input_elem.send_keys(Keys.ENTER)
     return driver

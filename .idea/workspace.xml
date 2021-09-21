@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75041edf-5b3c-4d94-96c4-4a8acb507c8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bunjangScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/bunjangScraper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dataInterpreter.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataInterpreter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inputHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/inputHandler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/joongnaScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/joongnaScraper.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/karrotScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/karrotScraper.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/thriftshopScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/thriftshopScraper.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,45 +102,45 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="201" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1631274234923" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1631274610004">
+    <state width="1419" height="303" key="GridCell.Tab.0.bottom" timestamp="1631286519643">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1631274610004" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1631274610002">
+    <state width="1419" height="303" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1631286519643" />
+    <state width="1419" height="303" key="GridCell.Tab.0.center" timestamp="1631286519641">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1631274610002" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1631274609999">
+    <state width="1419" height="303" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1631286519641" />
+    <state width="1419" height="303" key="GridCell.Tab.0.left" timestamp="1631286519640">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1631274609999" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1631274610003">
+    <state width="1419" height="303" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1631286519640" />
+    <state width="1419" height="303" key="GridCell.Tab.0.right" timestamp="1631286519642">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1631274610003" />
-    <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1631274106973">
+    <state width="1419" height="303" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1631286519642" />
+    <state width="1419" height="303" key="GridCell.Tab.1.bottom" timestamp="1631286519646">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1631274106973" />
-    <state width="1419" height="303" key="GridCell.Tab.1.center" timestamp="1631274106971">
+    <state width="1419" height="303" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1631286519646" />
+    <state width="1419" height="303" key="GridCell.Tab.1.center" timestamp="1631286519644">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1631274106971" />
-    <state width="1419" height="303" key="GridCell.Tab.1.left" timestamp="1631274106970">
+    <state width="1419" height="303" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1631286519644" />
+    <state width="1419" height="303" key="GridCell.Tab.1.left" timestamp="1631286519643">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1631274106970" />
-    <state width="1419" height="303" key="GridCell.Tab.1.right" timestamp="1631274106971">
+    <state width="1419" height="303" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1631286519643" />
+    <state width="1419" height="303" key="GridCell.Tab.1.right" timestamp="1631286519645">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1419" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1631274106971" />
-    <state x="399" y="279" key="com.intellij.ide.util.TipDialog" timestamp="1631239153141">
+    <state width="1419" height="303" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1631286519645" />
+    <state x="399" y="279" key="com.intellij.ide.util.TipDialog" timestamp="1632204374993">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="399" y="279" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1631239153141" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1631260044416">
+    <state x="399" y="279" key="com.intellij.ide.util.TipDialog/0.0.1440.900@0.0.1440.900" timestamp="1632204374993" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1632204604499">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1631260044416" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1632204604499" />
   </component>
 </project>
