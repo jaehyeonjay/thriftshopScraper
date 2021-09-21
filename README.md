@@ -3,6 +3,7 @@
 THRIFTSHOP SCRAPER
 
 WHAT IT IS:
+
 thriftshopScraper scrapes products from three major Korean online secondhand sales websites: 당근마켓(Karrot), 
 번개장터(Bunjang), 중고나라(Joongna). 
 
@@ -12,6 +13,7 @@ they'd like to compare - this is useful because products on page 100 were probab
 no longer available. 
 
 WHY I MADE IT:
+
 I love secondhand shops. But because online secondhand sales websites have only recently boomed in Korea, there is no 
 price-comparing mechanism to aid thrifters - buyers have to flip through Karrot, Bunjang, and Joongna separately and 
 manually compare prices; sellers don't know the equilibrium price and struggle to price their goods. 
@@ -20,6 +22,7 @@ Normal online shopping doesn't have this problem; Naver's product aggregator mak
 best deals. I wanted a product aggregator for online thriftshops, so that is what I am aiming
 
 HOW IT WORKS:
+
 Run thriftshopScraper.py. You will be asked a product to search for - enter a keyword as if you were typing into the
 search engine of the thriftshop sites. Then, you must specify the number of items to scrape. You may enter a large 
 number; the program will scrape as many items as it can find. 

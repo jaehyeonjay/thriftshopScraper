@@ -1,3 +1,6 @@
+*SAMPLE* OF SCRAPED DATA. YOU CAN TEST THE dataInterpreter's analysis functionality USING THIS FILE,
+THEN RUNNING interpreter_tester.py
+
 SHOP	ITEM	PRICE
 번개장터	구해요)닥터마틴홀리쿼드230(uk4)	0
 번개장터	닥터마틴쿼드	180000
